@@ -20,8 +20,13 @@ const mainRouter = require('./routes/main')
 const portfolioRouter = require('./routes/portfolio')
 const resumeRouter = require('./routes/resume')
 const testimonialsRouter = require('./routes/testimonials')
+const aggregateRouter = require('./routes/aggregate')
 
 app.use('/api/v1/', mainRouter)
+app.use('/api/v1/', portfolioRouter)
+app.use('/api/v1/', resumeRouter)
+app.use('/api/v1/', testimonialsRouter)
+app.use('/api/v1/', aggregateRouter)
 
 // export app js
 module.exports = app
