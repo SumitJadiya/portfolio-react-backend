@@ -72,4 +72,4 @@ const mainSchema = mongoose.Schema({
   },
 })
 
-module.exports = mongoose.model('main', mainSchema)
+module.exports = mongoose.model('Main', mainSchema)
