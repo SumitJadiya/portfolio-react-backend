@@ -15,9 +15,5 @@ app.use(express.json())
 // morgan middleware
 app.use(morgan('tiny'))
 
-app.get('/', (req, res) => {
-  res.send('test')
-})
-
 // export app js
 module.exports = app
