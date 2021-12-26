@@ -9,8 +9,6 @@ exports.getCompleteData = async (req, res) => {
   const resume = await Resume.find()
   const testimonials = await Testimonials.find()
 
-  console.log(main)
-
   res.status(200).json({
     success: true,
     main: main[0],
