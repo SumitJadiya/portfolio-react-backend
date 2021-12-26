@@ -3,35 +3,27 @@ const mongoose = require('mongoose')
 const mainSchema = mongoose.Schema({
   name: {
     type: String,
-    required: true,
   },
   occupation: {
     type: String,
-    required: true,
   },
   description: {
     type: String,
-    required: true,
   },
   image: {
     type: String,
-    required: true,
   },
   bio: {
     type: String,
-    required: true,
   },
   contactMessage: {
     type: String,
-    required: true,
   },
   email: {
     type: String,
-    required: true,
   },
   phone: {
     type: String,
-    required: true,
   },
   address: {
     street: {
