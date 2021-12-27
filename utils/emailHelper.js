@@ -9,11 +9,15 @@ const mailHelper = async (option) => {
     },
   })
 
+  console.log(option.name)
+  console.log(option.subject)
+  const updatedSubject = 'Contact Form Query by ' + option.name + ' - ' + option.subject
+
   const message = {
     from: '"Sumit Jadiya" <stj11bitd@gmail.com>', // sender address
     to: option.email, // list of receivers
     bcc: 'jadiyaskj@gmail.com',
-    subject: option.subject, // Subject line
+    subject: updatedSubject, // Subject line
     text: option.message, // plain text body
   }
 

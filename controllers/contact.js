@@ -4,12 +4,13 @@ const mailHelper = require('../utils/emailHelper')
 exports.createContact = async (req, res) => {
   const contact = await Contact.create(req.body)
 
-  const { name, email, message, subject } = req.body
+  const { contactName, contactEmail, contactSubject, contactMessage } = req.body
 
   const option = {
-    email,
-    subject: 'new query for Sumit Jadiya',
-    message,
+    name: contactName,
+    email: contactEmail,
+    subject: contactSubject,
+    message: contactMessage,
   }
   await mailHelper(option)
 
