@@ -17,6 +17,7 @@ exports.createContact = async (req, res) => {
     await mailHelper(option)
   } catch (ex) {
     console.error(ex.message)
+    res.status(502).send('unable to fulfil the request!')
   }
 
   res.status(200).json({

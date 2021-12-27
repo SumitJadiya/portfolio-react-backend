@@ -22,7 +22,7 @@ const mailHelper = async (option) => {
   // send mail with defined transport object
   await transporter.sendMail(message, (error, info) => {
     if (error) {
-      console.log(error)
+      console.log('Error while sending email - ' + error)
     } else {
       console.log('Email sent: ' + info.response)
     }
