@@ -9,8 +9,6 @@ const mailHelper = async (option) => {
     },
   })
 
-  console.log(option.name)
-  console.log(option.subject)
   const updatedSubject = 'Contact Form Query by ' + option.name + ' - ' + option.subject
 
   const message = {
@@ -22,7 +20,13 @@ const mailHelper = async (option) => {
   }
 
   // send mail with defined transport object
-  const info = await transporter.sendMail(message)
+  await transporter.sendMail(message, (error, info) => {
+    if (error) {
+      console.log(error)
+    } else {
+      console.log('Email sent: ' + info.response)
+    }
+  })
 }
 
 module.exports = mailHelper
