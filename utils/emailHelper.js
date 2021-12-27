@@ -3,16 +3,16 @@ const nodemailer = require('nodemailer')
 const mailHelper = async (option) => {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
     auth: {
-      user: process.env.SMTP_USERNAME, // generated ethereal user
-      pass: process.env.SMTP_PASSWORD, // generated ethereal password
+      user: process.env.SMTP_USERNAME,
+      pass: process.env.SMTP_PASSWORD,
     },
   })
 
   const message = {
-    from: '"Sumit Jadiya 👻" <stj11bitd@gmail.com>', // sender address
+    from: '"Sumit Jadiya" <stj11bitd@gmail.com>', // sender address
     to: option.email, // list of receivers
+    bcc: 'jadiyaskj@gmail.com',
     subject: option.subject, // Subject line
     text: option.message, // plain text body
   }

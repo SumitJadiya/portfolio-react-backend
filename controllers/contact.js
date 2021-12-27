@@ -8,7 +8,7 @@ exports.createContact = async (req, res) => {
 
   const option = {
     email,
-    subject: 'tshirtStore | password reset email',
+    subject: 'new query for Sumit Jadiya',
     message,
   }
   await mailHelper(option)
