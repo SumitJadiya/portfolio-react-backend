@@ -12,7 +12,12 @@ exports.createContact = async (req, res) => {
     subject: contactSubject,
     message: contactMessage,
   }
-  await mailHelper(option)
+  try {
+    console.log('sending email ..')
+    await mailHelper(option)
+  } catch (ex) {
+    console.error(ex.message)
+  }
 
   res.status(200).json({
     success: true,
