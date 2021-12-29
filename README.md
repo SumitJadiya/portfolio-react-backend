@@ -16,3 +16,4 @@ SMTP_PASSWORD = xxx
 #### plugins
 
 nodemailer - email services
+morgan - logger
