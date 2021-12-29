@@ -12,3 +12,7 @@ COOKIE_TIME=x
 SMTP_HOST = smtp.xxxx.com
 SMTP_USERNAME = xsaxxx@u.com
 SMTP_PASSWORD = xxx
+
+#### plugins
+
+nodemailer - email services
